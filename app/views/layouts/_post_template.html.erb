@@ -11,7 +11,7 @@
           <div id="logo">
 
             <%= image_tag 'surf_paddle_logo.png' %>
-            <span id="logo_text"><a href="#">SURF & PADDLE CO. BLOG</a></span>
+            <span id="logo_text"><%= link_to "SURF & PADDLE CO. BLOG", root_path %></span>
 
           </div>
 
@@ -64,7 +64,7 @@
 
         <div id="top"><%= image_tag "top_right.png" %></div>
 
-        <div id="mid" style="background-image: url(/assets/surfer1.jpg)"><div class="light-tint"></div></div>
+        <div id="mid" style="background-image: url(<%= image_url('surfer1.jpg') %>)"><div class="light-tint"></div></div>
 
         <div id="bottom">
           <h3>WATBAR HEADING</h3>
@@ -83,8 +83,17 @@
 
     <h1>MOST POPULAR POSTS</h1>
 
-    <div class="post-block" style="background-image: url(<%= image_url('surfer2.jpg') %>)">
-      <a href="/posts/ANOTHER COOL POST">
+    <% @posts.each do |post| %>
+      <div class="post-block" style="background-image: url(<%= image_url(post + '.jpg') %>)">
+          <div class="light-tint">
+            <%= link_to post, post_path(post_name: post.parameterize) %>
+          </div>
+        </a>
+      </div>
+    <% end %>
+
+    <!-- <div class="post-block" style="background-image: url(<%= image_url('surfer2.jpg') %>)">
+      <a href="/ANOTHER COOL POST">
         <div class="light-tint">
           <span>ANOTHER COOL POST</span>
         </div>
@@ -92,7 +101,7 @@
     </div>
 
     <div class="post-block" style="background-image: url(<%= image_url('beer1.jpg') %>)">
-      <a href="/posts/POST TITLE">
+      <a href="/POST TITLE">
         <div class="light-tint">
           <span>POST TITLE</span>
         </div>
@@ -100,7 +109,7 @@
     </div>
 
     <div class="post-block" style="background-image: url(<%= image_url('surfer3.jpg') %>)">
-      <a href="/posts/HERE'S ANOTHER LONGER POST TITLE">
+      <a href="/HERE'S ANOTHER LONGER POST TITLE">
         <div class="light-tint">
           <span>HERE'S ANOTHER LONGER POST TITLE</span>
         </div>
@@ -108,12 +117,12 @@
     </div>
 
     <div class="post-block" style="background-image: url(<%= image_url('beers2.jpg') %>)">
-      <a href="/posts/OH COOL A POST">
+      <a href="/OH COOL A POST">
         <div class="light-tint">
           <span>OH COOL A POST!</span>
         </div>
       </a>
-    </div>
+    </div> -->
 
     <div id="bottom_nav" class="clear">
       <div class="wrapper">

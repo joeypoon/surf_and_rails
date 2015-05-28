@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
   include PagesHelper
 
-  # before_actions do
-  #   @posts = ["ANOTHER COOL POST", "POST TITLE", "HERE'S ANOTHER LONGER POST TITLE", "OH COOL A POST"]
-  # end
+  before_action do
+    @posts = ["ANOTHER COOL POST", "POST TITLE", "HERE'S ANOTHER LONGER POST TITLE", "OH COOL A POST"]
+  end
 
   def most_popular_post
     @title = "so engaging, much fantastic".upcase
@@ -11,7 +11,9 @@ class PagesController < ApplicationController
   end
 
   def post
-    @title = params[:post_name].upcase
+    @title = @posts.find do |post|
+      post if post.parameterize == params[:post_name].parameterize
+    end
     @content = content[@title.parameterize]
   end
 
