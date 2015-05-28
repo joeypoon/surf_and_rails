@@ -16,7 +16,6 @@ body {
 
 header {
   height: 35em;
-  background-image: url('/assets/bg-header.jpg');
   background-size: cover;
 }
 
@@ -236,29 +235,7 @@ footer #bottom_nav {
   color: white;
 }
 
-@media (max-width: 600px) {
-  body {
-    font-size: 80%;
-  }
-
-  #logo #logo_text {
-    position: static;
-    min-width: 200px;
-    margin-right: 1em;
-  }
-
-  footer div a div span {
-    position: static;
-    min-width: 200px;
-  }
-
-  #bottom_nav_items span {
-    position: static;
-    min-width: 200px;
-  }
-
-  #bottom_nav_items ul {
-    position: static;
-    min-width: 200px;
-  }
+section #content {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
