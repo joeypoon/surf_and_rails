@@ -84,45 +84,10 @@
     <h1>MOST POPULAR POSTS</h1>
 
     <% @posts[1..4].each do |post| %>
-      <div class="post-block" style="background-image: url(<%= image_url(post.title + '.jpg') %>)">
-          <div class="light-tint">
-            <%= link_to post.title, post_path(post_title: post.title.parameterize) %>
-          </div>
-        </a>
+      <div class="post-block" style="background-image: url(<%= image_url(post.image) %>)">
+          <%= link_to raw("<div class='light-tint'><span>" + post.title + "</span></div>"), post_path(post_title: post.title.parameterize) %>
       </div>
     <% end %>
-
-    <!-- <div class="post-block" style="background-image: url(<%= image_url('surfer2.jpg') %>)">
-      <a href="/ANOTHER COOL POST">
-        <div class="light-tint">
-          <span>ANOTHER COOL POST</span>
-        </div>
-      </a>
-    </div>
-
-    <div class="post-block" style="background-image: url(<%= image_url('beer1.jpg') %>)">
-      <a href="/POST TITLE">
-        <div class="light-tint">
-          <span>POST TITLE</span>
-        </div>
-      </a>
-    </div>
-
-    <div class="post-block" style="background-image: url(<%= image_url('surfer3.jpg') %>)">
-      <a href="/HERE'S ANOTHER LONGER POST TITLE">
-        <div class="light-tint">
-          <span>HERE'S ANOTHER LONGER POST TITLE</span>
-        </div>
-      </a>
-    </div>
-
-    <div class="post-block" style="background-image: url(<%= image_url('beers2.jpg') %>)">
-      <a href="/OH COOL A POST">
-        <div class="light-tint">
-          <span>OH COOL A POST!</span>
-        </div>
-      </a>
-    </div> -->
 
     <div id="bottom_nav" class="clear">
       <div class="wrapper">
