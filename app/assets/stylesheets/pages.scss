@@ -1,0 +1,264 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: Geneva,Tahoma,Verdana,sans-serif;
+  color: rgb(12, 71, 113);
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 35em;
+  background-image: url('/assets/bg-header.jpg');
+  background-size: cover;
+}
+
+.container {
+  max-width: 1600px;
+}
+
+.tint {
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 115, 186, .8);
+}
+
+.light-tint {
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 115, 186, .5);
+  color: rgba(22, 115, 186, 1) !important;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#logo {
+  float: left;
+}
+
+#logo #logo_text {
+  position: absolute;
+  margin-top: 1.2em;
+  font-size: 1.1em;
+  min-width: 20em;
+}
+
+#menu ul {
+  float: right;
+  list-style: none;
+}
+
+#menu ul li {
+  float: left;
+  padding-right: .8em;
+  font-size: 1.2em;
+}
+
+#center_logo {
+  text-align: center;
+  padding-top: 12em;
+}
+
+#center_logo h1 {
+  color: white;
+  font-size: 6em;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin-top: 2em;
+}
+
+#article {
+  width: 55%;
+  float: left;
+  margin-bottom: 5em;
+}
+
+#article h1 {
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+}
+
+#article p {
+  color: #2C3E50;
+  margin-top: 2em;
+}
+
+#article blockquote {
+  font-size: 2em;
+  color: #3498DB;
+  border-left: 2px solid #BDC3C7;
+  margin-left: .2em;
+  padding-left: 1em;
+  padding-top: .4em;
+  padding-bottom: .4em;
+}
+
+main #right_column {
+  float: right;
+  width: 40%;
+  margin-top: 3em;
+}
+
+#top {
+  margin-left: 20%;
+}
+
+#mid {
+  background-size: cover;
+  height: 20em;
+  width: 15em;
+  margin-left: 20%;
+  margin-top: 2em;
+}
+
+#bottom {
+  margin-top: 2em;
+  width: 16em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#bottom h3 {
+  margin-bottom: 0;
+}
+
+footer {
+  height: 15em;
+}
+
+hr {
+  color: #ECF0F1;
+  margin-top: 5em;
+}
+
+footer .post-block {
+  height: 23em;
+  min-width: 21em;
+  width: 25%;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+footer .light-tint:hover {
+  background: rgba(22, 115, 186, .25);
+  color: white !important;
+}
+
+footer h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  color: #3498DB;
+}
+
+#article a:visited {
+  color: #95A5A6;
+}
+
+footer div a div span {
+  position: absolute;
+  bottom: 0;
+  font-size: 2em;
+  margin-left: .4em;
+  margin-bottom: .3em;
+}
+
+footer div a div {
+  position: relative;
+}
+
+footer #bottom_nav {
+  height: 6em;
+  width: 100%;
+  background-color: rgb(8, 52, 82);
+  margin: 0;
+}
+
+#bottom_nav_items {
+  position: relative;
+  color: white;
+  font-size: .9em;
+}
+
+#bottom_nav_items img {
+  margin-top: .5em;
+}
+
+#bottom_nav_items span {
+  position: absolute;
+  top: 0;
+  margin-top: 2.3em;
+}
+
+#bottom_nav_items ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 2.3em;
+  margin-right: 1em;
+}
+
+#bottom_nav_items ul li {
+  float: left;
+  list-style: none;
+  margin-right: .5em;
+}
+
+#bottom_nav_items ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 80%;
+  }
+
+  #logo #logo_text {
+    position: static;
+    min-width: 200px;
+    margin-right: 1em;
+  }
+
+  footer div a div span {
+    position: static;
+    min-width: 200px;
+  }
+
+  #bottom_nav_items span {
+    position: static;
+    min-width: 200px;
+  }
+
+  #bottom_nav_items ul {
+    position: static;
+    min-width: 200px;
+  }
+}
