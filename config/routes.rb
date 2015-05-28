@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'pages#most_popular_post'
+  root 'pages#newest_post'
 
-  get '/:post_name' => 'pages#post', as: :post
+  get '/:post_title' => 'pages#post', as: :post
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

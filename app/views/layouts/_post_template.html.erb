@@ -83,10 +83,10 @@
 
     <h1>MOST POPULAR POSTS</h1>
 
-    <% @posts.each do |post| %>
-      <div class="post-block" style="background-image: url(<%= image_url(post + '.jpg') %>)">
+    <% @posts[1..4].each do |post| %>
+      <div class="post-block" style="background-image: url(<%= image_url(post.title + '.jpg') %>)">
           <div class="light-tint">
-            <%= link_to post, post_path(post_name: post.parameterize) %>
+            <%= link_to post.title, post_path(post_title: post.title.parameterize) %>
           </div>
         </a>
       </div>

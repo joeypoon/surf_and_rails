@@ -1,8 +1,8 @@
 class Post
-  attr_reader :name, :content
+  attr_reader :title, :content
 
-  def initialize name, content
-    @name = name
+  def initialize title, content
+    @title = title
     @content = content
   end
 

@@ -1,20 +1,29 @@
+require 'posts'
+
 class PagesController < ApplicationController
   include PagesHelper
 
   before_action do
-    @posts = ["ANOTHER COOL POST", "POST TITLE", "HERE'S ANOTHER LONGER POST TITLE", "OH COOL A POST"]
+    @posts = [
+      Post.new("SO FANTASTIC, SUCH ENGAGING", "This is content for SO FANTASTIC, SUCH ENGAGING. BLAH BLAH BLAH."),
+      Post.new("ANOTHER COOL POST", "This is content for ANOTHER COOL POST. BLAH BLAH BLAH."),
+      Post.new("POST TITLE", "This is content for POST TITLE. BLAH BLAH BLAH."),
+      Post.new("HERE'S ANOTHER LONGER POST TITLE", "This is content for HERE'S ANOTHER LONGER POST TITLE. BLAH BLAH BLAH."),
+      Post.new("OH COOL A POST", "This is content for OH COOL A POST. BLAH BLAH BLAH.")
+      ]
   end
 
-  def most_popular_post
-    @title = "so engaging, much fantastic".upcase
-    @content = content[@title.parameterize]
+  def newest_post
+    @title = @posts.first.title
+    @content = @posts.first.content
   end
 
   def post
-    @title = @posts.find do |post|
-      post if post.parameterize == params[:post_name].parameterize
+    current_post = @posts.find do |post|
+      post if post.title.parameterize == params[:post_title].parameterize
     end
-    @content = content[@title.parameterize]
+    @title = current_post.title
+    @content = current_post.content
   end
 
 end
