@@ -1,7 +1,4 @@
-require 'posts'
-
 class PagesController < ApplicationController
-  include PagesHelper
 
   before_action do
     @posts = [
