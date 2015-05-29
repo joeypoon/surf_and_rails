@@ -1,0 +1,11 @@
+<div class="container">
+  <ul>
+
+    <% @cities.keys.each do |city| %>
+
+      <li><%= link_to city, weather_path(city: city.parameterize) %></li>
+
+    <% end %>
+
+  </ul>
+</div>

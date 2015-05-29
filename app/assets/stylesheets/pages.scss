@@ -4,6 +4,8 @@
 
 html {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -20,7 +22,6 @@ header {
 }
 
 .container {
-  max-width: 1600px;
 }
 
 .tint {
@@ -53,6 +54,7 @@ header {
 }
 
 #menu ul {
+  margin-top: .5em;
   float: right;
   list-style: none;
 }
@@ -236,4 +238,14 @@ footer #bottom_nav {
 section #content {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+#recent_posts {
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
 }

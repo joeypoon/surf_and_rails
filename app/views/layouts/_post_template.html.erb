@@ -1,51 +1,55 @@
-<div class="container">
+<div class="container-fluid">
 
-  <header style="background: url(<%= image_url('bg-header.jpg') %>)">
+  <div id="header-bg" style="background: url(<%= image_url('bg-header.jpg') %>)">
 
     <div class="tint">
 
-      <div class="wrapper">
+      <header>
 
-        <div id="top-bar">
+        <div class="container">
 
-          <div id="logo">
+          <div class="row" id="top-bar">
 
-            <%= image_tag 'surf_paddle_logo.png' %>
-            <span id="logo_text"><%= link_to "SURF & PADDLE CO. BLOG", root_path %></span>
+            <div id="logo">
+
+              <%= image_tag 'surf_paddle_logo.png' %>
+              <span id="logo_text"><%= link_to "SURF & PADDLE CO. BLOG", root_path %></span>
+
+            </div>
+
+            <div id="menu">
+
+              <ul class="list-inline">
+
+                <li><a href="#">About</a></li>
+                <li><a href="#">Search <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+
+              </ul>
+
+            </div>
 
           </div>
 
-          <div id="menu">
+          <div id="center_logo">
 
-            <ul>
-
-              <li><a href="#">About</a></li>
-              <li><a href="#">Search <i class="fa fa-search"></i></a></li>
-
-            </ul>
+            <h1>SURF & PADDLE CO.</h1>
+            <span>An Iron Yard Academy Project</span>
 
           </div>
 
         </div>
 
-        <div id="center_logo">
-
-          <h1>SURF & PADDLE CO.</h1>
-          <span>An Iron Yard Academy Project</span>
-
-        </div>
-
-      </div>
+      </header>
 
     </div>
 
-  </header>
+  </div>
 
-  <div class="wrapper">
+  <div class="container">
 
-    <main>
+    <main class="row">
 
-      <section id="article">
+      <section id="article" class="col-md-6">
 
         <h1><%= @title %></h1>
         <a href=""><%= image_tag 'author.png' %></a> on Sunday <a href="#">May 24, 2015 10:15 PM</a>
@@ -60,11 +64,11 @@
 
       </section>
 
-      <section id="right_column">
+      <section id="right_column" class="col-md-6">
 
         <div id="top"><%= image_tag "top_right.png" %></div>
 
-        <div id="mid" style="background-image: url(<%= image_url('surfer1.jpg') %>)"><div class="light-tint"></div></div>
+        <div id="mid" style="background-image: url(<%= image_url('surfer1.jpg') %>)"><div class="light-tint img-responsive"></div></div>
 
         <div id="bottom">
           <h3>WATBAR HEADING</h3>
@@ -84,17 +88,17 @@
     <h1>MOST POPULAR POSTS</h1>
 
     <% @posts[1..4].each do |post| %>
-      <div class="post-block" style="background-image: url(<%= image_url(post.image) %>)">
+      <div class="post-block img-responsive" style="background-image: url(<%= image_url(post.image) %>)">
           <%= link_to raw("<div class='light-tint'><span>" + post.title + "</span></div>"), post_path(post_title: post.title.parameterize) %>
       </div>
     <% end %>
 
     <div id="bottom_nav" class="clear">
-      <div class="wrapper">
+      <div class="container">
         <div id="bottom_nav_items">
           <%= image_tag "ironyard.jpg" %>
           <span>The Ironyard © 2015, All Rights Reserved </span>
-          <ul>
+          <ul class="list-inline">
             <li><a href="#">Nav Item 1 |</a></li>
             <li><a href="#">Nav Item 2 |</a></li>
             <li><a href="#">Nav Item 3 |</a></li>
