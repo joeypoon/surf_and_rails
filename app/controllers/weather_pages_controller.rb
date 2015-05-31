@@ -2,24 +2,25 @@ class WeatherPagesController < ApplicationController
 
   before_action do
     @cities = {
+      'Houston' => 'texas',
       'Shanghai' => 'CN',
       'Istanbul' => 'TR',
       'Karachi' => 'PK',
       'Mumbai' => 'IN',
-      'Moscow' => 'RU',
+      # 'Moscow' => 'RS', API doesn't return anything
       'Manila' => 'PH',
       'Sao Paulo' => 'BR',
-      'Beijing' => 'CN',
+      'Beijing' => 'Beijing',
       'Tianjin' => 'CN',
       'Guangzhou' => 'CN',
-      'Delhi' => 'IN',
+      'New Delhi' => 'IN',
       'Seoul' => 'KR',
-      'Shenzhen' => 'CN',
+      # 'Shenzhen' => 'CN', API doesn't return anything
       'Jakarta' => 'ID',
       'Tokyo' => 'JP',
       'Mexico City' => 'MX',
-      'Kinshasa' => 'CD',
-      'Bangalore' => 'IN',
+      # 'Kinshasa' => 'CD', API doesn't return anything
+      'Bengaluru' => 'IN',
       'New York City' => 'US',
       'London' => 'GB'
     }

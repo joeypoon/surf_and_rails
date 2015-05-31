@@ -16,6 +16,15 @@ body {
   margin: 0;
 }
 
+#perma_nav {
+  margin-top: 1em;
+}
+
+.navbar {
+  margin: 0 0 .2em 0;
+  padding: 0;
+}
+
 header {
   height: 35em;
   background-size: cover;
@@ -248,4 +257,11 @@ section #content {
     margin: 0;
     padding: 0;
   }
+}
+
+.weather_show {
+  height: 100%; //40em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
 }

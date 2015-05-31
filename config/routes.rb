@@ -2,11 +2,11 @@ Rails.application.routes.draw do
 
   root 'pages#newest_post'
 
-  get '/:post_title' => 'pages#post', as: :post
+  get 'posts/:post_title' => 'pages#post', as: :post
 
-  get '/city/index' => 'weather_pages#index', as: :city_index
+  get 'city/index' => 'weather_pages#index', as: :city_index
 
-  get '/:city/weather' => 'weather_pages#show', as: :weather
+  get ':city/weather' => 'weather_pages#show', as: :weather
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container weather_show" style="background-image: url(<%= image_url(@city.parameterize + '.jpg') %>);">
 
   <h1><%= @city %></h1>
-  Temperature: <%= @weather.temperature %>°F
-  Rain Chance: <%= @weather.rain %>%
-  Relative Humidity: <%= @weather.humidity %>
+  <p>Temperature: <%= @weather.temperature %>°F</p>
+  <p>Rain: <%= @weather.rain %>%</p>
+  <p>Relative Humidity: <%= @weather.humidity %></p>
 
 </div>
